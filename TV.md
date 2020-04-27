@@ -1,16 +1,16 @@
 ## TradingView戦略の利用について
-Trading View戦略を利用すると、Trading Viewのアラート機能と連動して自動売買が可能になります。
-以下には、Trading View戦略を利用する上での必要な設定手順を記載します。アラートの受信先として、Gmailを利用します。
+Trading View can be used to make use of the power of the trading view.
+The following, Trading View, use the necessary hand-set. The trust is first received, and Gmail is used to take advantage of it.
 
 ### TradingViewのアラート設定
 
-すみません。速攻、横着します。ProjectBBBのすばらしい記事があるので、参考にアラートの設定をしてください。
+Excuse me. Quick ly, sideways. There's a great article on ProjectBBB, so please set up alerts for your information.
 https://note.mu/project_bbb/n/n8fa955df192d
 
-以下のようにLongアラートのメッセージには`Buy`, Shortアラートのメッセージには`Sell`, Closeアラートのメッセージには`Exit`の文字を入れて
-おいていただければ、あとは好きに設定して構いません。
+Long alert messages include `Buy`, Short alert messages `Sell`, close alert messages with `Exit` characters
+If you leave, you can set the rest as you like.
 
-例)
+example:
 
 ```
 alertcondition((sma_val < low_val), title="Long", message="Buy")
@@ -18,79 +18,79 @@ alertcondition((sma_val > high_val), title="Short", message="Sell")
 alertcondition(RSI > RSI_top, title="Exit", message="Exit")
 ```
 
-あ、アラートの配信先はGmailにすることをお忘れなく。
+Oh, don't forget to gmail where the alerts are delivered.
 
-### Gmailの設定
+### Gmail Settings
 
-以下のURLより、Gmail APIを有効にする必要があります。
+You need to enable the Gmail API from the following URL.
 
 https://developers.google.com/gmail/api/quickstart/python?hl=ja
 
-1. 真ん中あたりにある「ENABLE THE GMAIL API」のボタンをぽちってください。
+1. Please pop the button of "ENABLE THE GMAIL API" in the middle.
 
     ![](./img/gmail/1.png)
 
-2. 「+ Create a new project」を選択し、NEXTを押下。
+2. Select +Create a new project and press NEXT.
 
     ![](./img/gmail/2.png)
 
-3. プロジェクト名で「Ebisu」と入力し、NEXTを押下。
+3. Type Ebisu in the project name and press NEXT.
 
     ![](./img/gmail/3.png)
 
-4. もういっちょ。
+4. It's already time.
 
     ![](./img/gmail/4.png)
 
-5. ぐるぐるが回り始めたら、しばらく待ってください。
+5. When it starts to turn round and round, wait for a while.
 
     ![](./img/gmail/5.png)
 
-6. 完了したら、「DOWNLOAD CLIENT CONFIGURATION」を押下。
+6. When you're done, press DOWNLOAD CLIENT CONFIGURATION.
 
     ![](./img/gmail/6.png)
 
-7. 設定ファイルがダウンロードされます。
+7. The configuration file is downloaded.
 
     ![](./img/gmail/7.png)
 
-8. ダウンロードしたファイルをebisuプロジェクトのフォルダ直下に置いてください。
+8. Place the downloaded file directly below the folder in the ebisu project.
 
     ![](./img/gmail/8.png)
 
-9. Token生成用のプログラムを実行します。
+9. Run the program for token generation.
 
     ```bash
     $ pip install --upgrade google-api-python-client oauth2client
     $ python quickstart.py
     ```
     
-10. ブラウザが自動で起動するので、Google認証を行います。
+10. Because the browser starts automatically, Google authentication is done.
 
     ![](./img/gmail/10.png)
 
-11. 許可を押下してください。
+11. Press permission.
 
     ![](./img/gmail/11.png)
 
-12. 成功するとブラウザ上に「The authentication flow has completed」と表示されます。
+12. If successful, the browser displays "The authentication flow has completed".
 
     ![](./img/gmail/12.png)
 
-13. ebisuプロジェクトのフォルダ直下に`token.json`というファイルが作成されているのを確認します。
+13. Make sure that a file named `token.json` is created directly below the folder in the ebisu project.
 
     ![](./img/gmail/13.png)
 
-14. 環境変数にGmailアドレスを設定します。
+14. Set the Gmail address to the environment variable.
 
     ```
     $ vi ~/.bash_profile
     export GMAIL_ADDRESS=******@gmail.com
     ```
 
-### 実行
+### Run
 
-`--strategy`オプションに`TV`を指定して実行してください。
+Run with `TV` in the `--strategy` option.
 
 ```bash
 $ python main.py --strategy TV
