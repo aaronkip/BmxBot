@@ -1,8 +1,7 @@
-## TradingView戦略の利用について
-Trading View can be used to make use of the power of the trading view.
-The following, Trading View, use the necessary hand-set. The trust is first received, and Gmail is used to take advantage of it.
+## About the use of the TradingView strategy
+The trading View strategy enables automated trading in conjunction with trading view alerts. The following are the configuration steps required to use the Trading View strategy. Use Gmail to receive alerts.
 
-### TradingViewのアラート設定
+### TradingView Alert Settings
 
 Excuse me. Quick ly, sideways. There's a great article on ProjectBBB, so please set up alerts for your information.
 https://note.mu/project_bbb/n/n8fa955df192d
