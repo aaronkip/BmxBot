@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "env": {
+                "BITMEX_APIKEY" : "BSibSzSYSVLm6GQadqBqHfxz",
+                "BITMEX_SECRET": "kzZmg6JW0-kqBugjej8Xonh1YO75sN_PY9tl_gIyfjuM55QJ",
+                "BITMEX_TEST_APIKEY": "BSibSzSYSVLm6GQadqBqHfxz",
+                "BITMEX_TEST_SECRET": "kzZmg6JW0-kqBugjej8Xonh1YO75sN_PY9tl_gIyfjuM55QJ"
+            }
+        }
+    ]
+}

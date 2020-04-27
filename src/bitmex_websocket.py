@@ -65,7 +65,9 @@ class BitMexWs:
         """
         get auth info
         """
+        #api_key = os.environ.get("BITMEX_TEST_APIKEY") if self.testnet else ""
         api_key = os.environ.get("BITMEX_TEST_APIKEY") if self.testnet else os.environ.get("BITMEX_APIKEY")
+        #api_secret = os.environ.get("BITMEX_TEST_SECRET") if self.testnet else ""
         api_secret = os.environ.get("BITMEX_TEST_SECRET") if self.testnet else os.environ.get("BITMEX_SECRET")
 
         if len(api_key) > 0 and len(api_secret):
