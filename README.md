@@ -1,4 +1,4 @@
-# ゑびす
+# Sabisushi
 
 <img src="img/ebisusama.png" width="200">
 
