@@ -33,8 +33,8 @@ The author is not responsible for any damage caused by this software.
 
 ```bash
 $ brew install ta-lib
-$ git clone https://github.com/noda-sin/ebisu.git
-$ cd ebisu/
+$https://github.com/aaronkip/BmxBot.git
+$ cd BmxBot/
 $ pip install -r requirements.txt
 ```
 
